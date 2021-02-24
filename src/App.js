@@ -1,26 +1,50 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+import SearchBar from "./Components/SearchBar.js";
+import "antd/dist/antd.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      results: [],
+      date: new Date().toLocaleString(),
+    };
+  }
+
+  changeParent = (field, value) => {
+    this.setState({
+      [field]: value,
+    });
+  };
+
+  render() {
+    let confirmed = this.state.results.TotalConfirmed;
+    let deaths = this.state.results.TotalDeaths;
+    let recovered = this.state.results.TotalRecovered;
+    let countryName = this.state.results.Country;
+
+    return (
+      <div className="all">
+        <header>
+          <h1 className="title">Coronavirus Country Live Tracker</h1>
+          <h2 className="description">
+            Live tracker is updated every 10 minutes.
+            <p>Time Accessed: {this.state.date}</p>
+          </h2>
+          <h1 className="searchBar">
+            <SearchBar changeParent={this.changeParent}></SearchBar>
+          </h1>
+        </header>
+        <h2 className="statistics">
+          <div>Country: {countryName}</div>
+          <div>Confirmed: {confirmed}</div>
+          <div>Deaths: {deaths}</div>
+          <div>Recovered: {recovered}</div>
+        </h2>
+      </div>
+    );
+  }
 }
 
 export default App;

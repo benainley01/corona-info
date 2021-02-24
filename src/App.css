@@ -1,38 +1,39 @@
-.App {
+.statistics{
+  background-color: white;
   text-align: center;
+  padding: 30px;  
+  color: black;
+  margin-right: 300px;
+  margin-left: 300px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.searchBar{
+  margin-left: 300px;
+  margin-right: 300px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.title{
+  text-align: center;
+  color: black;
+  background-color: white;
+  margin-left: 300px;
+  margin-right: 300px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.description{
+  text-align: center;
+  background-color: white;
+  margin-left: 300px;
+  margin-right: 300px;
 }
 
-.App-link {
-  color: #61dafb;
+.all{
+  height: max-content;
+  background-size: cover;
+  margin-top: 100px;
+  font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body{
+  background-image: url(https://www.usnews.com/dims4/USNEWS/6b8fce5/2147483647/crop/2000x1333%2B0%2B0/resize/1200x1200%3E/quality/85/?url=https%3A%2F%2Fmedia.beam.usnews.com%2Fd4%2F30%2Fc480b10543ce8443f14e21287493%2F200313-pandemic-stock.jpg);
 }
